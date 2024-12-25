@@ -45,52 +45,64 @@ const HeroSection = () => {
             <p>Room</p>
           </div>
         </div>
+        <div>
+          <button
+            style={{ backgroundColor: "#EEE5D8", color: "#CEAF83" }}
+            className="px-4 py-2  rounded-full hover:bg-yellow-600 mt-10"
+          >
+            Discover Now
+          </button>
+        </div>
 
         {/* Bottom Form Section */}
-        <div className="bg-white rounded-lg shadow-lg p-6 grid grid-cols-2 md:grid-cols-3 gap-4 w-full">
-          <div>
-            <label className="text-gray-700 font-medium">Check In</label>
-            <input
-              type="text"
-              placeholder="Add dates"
-              className="mt-2 border border-gray-300 rounded-md p-2 w-full"
-            />
+        <div className="mt-10">
+          <p>Check Availability</p>
+          <div className="flex justify-between items-center bg-white shadow-2xl rounded-full p-4 md:p-6 w-full max-w-5xl mx-auto mt-5">
+            {/* Input Fields */}
+            <div className="flex w-full justify-between items-center">
+              {/* Check In */}
+              <div className="text-center px-4">
+                <p className="font-medium text-gray-700">Check In</p>
+                <p className="text-gray-400 text-sm">Add dates</p>
+              </div>
+              <div className="border-r border-gray-300 h-10"></div>
+
+              {/* Check Out */}
+              <div className="text-center px-4">
+                <p className="font-medium text-gray-700">Check Out</p>
+                <p className="text-gray-400 text-sm">Add dates</p>
+              </div>
+              <div className="border-r border-gray-300 h-10"></div>
+
+              {/* Adults */}
+              <div className="text-center px-4">
+                <p className="font-medium text-gray-700">Adults</p>
+                <p className="text-gray-400 text-sm">Add Adults</p>
+              </div>
+              <div className="border-r border-gray-300 h-10"></div>
+
+              {/* Children */}
+              <div className="text-center px-4">
+                <p className="font-medium text-gray-700">Children</p>
+                <p className="text-gray-400 text-sm">Add Children</p>
+              </div>
+              <div className="border-r border-gray-300 h-10"></div>
+
+              {/* Rooms */}
+              <div className="text-center px-4">
+                <p className="font-medium text-gray-700">Room's</p>
+                <p className="text-gray-400 text-sm">Add Room's</p>
+              </div>
+            </div>
+
+            {/* Search Button */}
+            <button
+              style={{ backgroundColor: "#CEAF83" }}
+              className=" text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg ml-4"
+            >
+              <img src="https://i.ibb.co.com/xY3Cpjy/Vector-2.png" alt="" />
+            </button>
           </div>
-          <div>
-            <label className="text-gray-700 font-medium">Check Out</label>
-            <input
-              type="text"
-              placeholder="Add dates"
-              className="mt-2 border border-gray-300 rounded-md p-2 w-full"
-            />
-          </div>
-          <div>
-            <label className="text-gray-700 font-medium">Adults</label>
-            <input
-              type="text"
-              placeholder="Add Adults"
-              className="mt-2 border border-gray-300 rounded-md p-2 w-full"
-            />
-          </div>
-          <div>
-            <label className="text-gray-700 font-medium">Children</label>
-            <input
-              type="text"
-              placeholder="Add Children"
-              className="mt-2 border border-gray-300 rounded-md p-2 w-full"
-            />
-          </div>
-          <div>
-            <label className="text-gray-700 font-medium">Rooms</label>
-            <input
-              type="text"
-              placeholder="Add Rooms"
-              className="mt-2 border border-gray-300 rounded-md p-2 w-full"
-            />
-          </div>
-          <button className="col-span-2 md:col-span-1 px-6 py-3 bg-yellow-500 text-white rounded-md hover:bg-yellow-600">
-            Search
-          </button>
         </div>
       </div>
 
