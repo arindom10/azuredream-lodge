@@ -40,7 +40,7 @@ const Review = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleItems = 3; // Number of reviews visible at a time
+  const visibleItems = 4; // Number of reviews visible at a time
 
   const nextSlide = () => {
     setCurrentIndex(
