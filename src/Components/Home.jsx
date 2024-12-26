@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import HeroSection from "./HeroSection";
 import RoomDetails from "./RoomDetails";
 
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <HeroSection />
       <RoomDetails />
+      <Footer />
     </div>
   );
 };
