@@ -14,7 +14,7 @@ const RoomDetails = () => {
     {
       id: 2,
       name: "Deluxe Double Room",
-      image: "https://i.ibb.co.com/qM2F5xn/02.png", // Replace with actual image URL
+      image: "https://i.ibb.co.com/sbgNS7K/Rectangle-4780-1.png", // Replace with actual image URL
       price: "$62.00/Day",
       size: "500 Sqft",
       guests: "1-4 guests",
@@ -23,7 +23,7 @@ const RoomDetails = () => {
     {
       id: 3,
       name: "Hill View Suite",
-      image: "https://i.ibb.co.com/R46GwcG/03.png", // Replace with actual image URL
+      image: "https://i.ibb.co.com/PMhvZjj/03-1.png", // Replace with actual image URL
       price: "$62.00/Day",
       size: "500 Sqft",
       guests: "1-4 guests",
@@ -32,7 +32,7 @@ const RoomDetails = () => {
     {
       id: 4,
       name: "Hill View Suite",
-      image: "https://i.ibb.co.com/x1LmhCD/04.png", // Replace with actual image URL
+      image: "https://i.ibb.co.com/F71SdcX/04-1.png", // Replace with actual image URL
       price: "$62.00/Day",
       size: "500 Sqft",
       guests: "1-4 guests",
@@ -41,7 +41,7 @@ const RoomDetails = () => {
     {
       id: 5,
       name: "Hill View Suite",
-      image: "https://i.ibb.co.com/x1HzPGf/05.png", // Replace with actual image URL
+      image: "https://i.ibb.co.com/ctWDcFM/Rectangle-4784.png", // Replace with actual image URL
       price: "$62.00/Day",
       size: "500 Sqft",
       guests: "1-4 guests",
@@ -71,29 +71,72 @@ const RoomDetails = () => {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
-        {rooms.map((room) => (
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 mt-8">
+        {/* First row */}
+        <div className="lg:col-span-3">
+          <div className="relative bg-white shadow-lg rounded-lg overflow-hidden h-96">
+            <img
+              src={rooms[0].image}
+              alt={rooms[0].name}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute top-2 right-2 bg-white text-orange-400 text-sm p-3 rounded-full">
+              {rooms[0].price}
+            </div>
+            <div className="absolute bottom-4 left-4 text-white">
+              <h3 className="text-xl font-semibold">{rooms[0].name}</h3>
+              <div className="flex space-x-4 text-sm mt-1">
+                <p>{rooms[0].size}</p>
+                <p>{rooms[0].guests}</p>
+                <p>{rooms[0].wifi}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="lg:col-span-2">
+          <div className="relative bg-white shadow-lg rounded-lg overflow-hidden h-96">
+            <img
+              src={rooms[1].image}
+              alt={rooms[1].name}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute top-2 right-2 bg-white text-orange-400 text-sm p-3 rounded-full">
+              {rooms[1].price}
+            </div>
+            <div className="absolute bottom-4 left-4 text-white">
+              <h3 className="text-xl font-semibold">{rooms[1].name}</h3>
+              <div className="flex space-x-4 text-sm mt-1">
+                <p>{rooms[1].size}</p>
+                <p>{rooms[1].guests}</p>
+                <p>{rooms[1].wifi}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Second row */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+        {rooms.slice(2).map((room) => (
           <div
             key={room.id}
-            className="relative bg-white shadow-lg rounded-lg overflow-hidden"
+            className="relative bg-white shadow-lg rounded-lg overflow-hidden h-96"
           >
-            <img src={room.image} alt={room.name} className="w-full h-full " />
-            <div className="absolute top-2 right-2 bg-white text-orange-400 text-sm p-3  rounded-full ">
+            <img
+              src={room.image}
+              alt={room.name}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute top-2 right-2 bg-white text-orange-400 text-sm p-3 rounded-full">
               {room.price}
             </div>
-            <div className="p-4">
-              <h3 className="text-xl absolute bottom-32 left-2 font-semibold text-white mb-2">
-                {room.name}
-              </h3>
-              <p className="text-gray-600 absolute bottom-24 left-2 text-sm">
-                {room.size}
-              </p>
-              <p className="text-gray-600 absolute bottom-24 left-2 text-sm">
-                {room.guests}
-              </p>
-              <p className="text-gray-600 absolute bottom-24 left-2 text-sm">
-                {room.wifi}
-              </p>
+            <div className="absolute bottom-4 left-4 text-white">
+              <h3 className="text-xl font-semibold">{room.name}</h3>
+              <div className="flex space-x-4 text-sm mt-1">
+                <p>{room.size}</p>
+                <p>{room.guests}</p>
+                <p>{room.wifi}</p>
+              </div>
             </div>
           </div>
         ))}
