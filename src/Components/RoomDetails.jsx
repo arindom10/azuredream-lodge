@@ -142,26 +142,28 @@ const RoomDetails = () => {
         ))}
       </div>
       <div className="flex justify-center ">
-        <button
-          style={{ backgroundColor: "#CEAF83" }}
-          className="flex items-center justify-center px-6 py-2  text-white rounded-full shadow-md hover:bg-opacity-80 transition mt-16"
-        >
-          <span className="mr-2">View All</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className="w-5 h-5"
+        <a href="/rooms">
+          <button
+            style={{ backgroundColor: "#CEAF83" }}
+            className="flex items-center justify-center px-6 py-2  text-white rounded-full shadow-md hover:bg-opacity-80 transition mt-16"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button>
+            <span className="mr-2">View All</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-5 h-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </a>
       </div>
     </div>
   );

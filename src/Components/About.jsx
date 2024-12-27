@@ -30,9 +30,11 @@ const About = () => {
 
       {/* Call to Action */}
       <div className="mt-10 text-center">
-        <button className="bg-blue-500 text-white px-6 py-2 rounded-md">
-          Learn More
-        </button>
+        <a href="/">
+          <button className="bg-blue-500 text-white px-6 py-2 rounded-md">
+            Learn More
+          </button>
+        </a>
       </div>
     </div>
   );

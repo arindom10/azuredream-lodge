@@ -54,12 +54,14 @@ const Navbar = () => {
           <button className="px-4 py-2  text-gray-800 rounded-md ">
             Login / Signup
           </button>
-          <button
-            style={{ backgroundColor: "#CEAF83" }}
-            className="px-4 py-2 bg-yellow-500 text-white rounded-full "
-          >
-            Reservation
-          </button>
+          <a href="/rooms">
+            <button
+              style={{ backgroundColor: "#CEAF83" }}
+              className="px-4 py-2 bg-yellow-500 text-white rounded-full "
+            >
+              Reservation
+            </button>
+          </a>
         </div>
       </div>
     </nav>
