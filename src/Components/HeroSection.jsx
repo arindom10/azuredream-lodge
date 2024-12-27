@@ -1,4 +1,5 @@
 import React from "react";
+import VideoPopup from "./VideoPopup";
 
 const HeroSection = () => {
   return (
@@ -46,12 +47,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div>
-          <button
-            style={{ backgroundColor: "#EEE5D8", color: "#CEAF83" }}
-            className="px-4 py-2  rounded-full hover:bg-yellow-600 mt-10"
-          >
-            Discover Now
-          </button>
+          <VideoPopup />
         </div>
 
         {/* Bottom Form Section */}
