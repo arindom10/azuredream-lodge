@@ -8,6 +8,7 @@ const Review = () => {
       title: "Webflow Developer",
       text: "Amazing design, easy to customize and a design quality superlative account on its cloud platform for the optimized performance. And we didn’t on our original designs.",
       rating: 5,
+      avatar: "https://i.ibb.co.com/Bg34vXn/AK.jpg",
     },
     {
       id: 2,
@@ -15,6 +16,7 @@ const Review = () => {
       title: "UI/UX Designer",
       text: "The experience has been exceptional. Their platform is intuitive, fast, and reliable. I’m super impressed with the results so far.",
       rating: 5,
+      avatar: "https://i.ibb.co.com/Bg34vXn/AK.jpg",
     },
     {
       id: 3,
@@ -22,6 +24,7 @@ const Review = () => {
       title: "Full Stack Developer",
       text: "Great platform with easy-to-use tools. The support team was very responsive and helped us launch our project successfully.",
       rating: 4,
+      avatar: "https://i.ibb.co.com/Bg34vXn/AK.jpg",
     },
     {
       id: 4,
@@ -29,6 +32,7 @@ const Review = () => {
       title: "Product Manager",
       text: "Their services exceeded expectations! The design flexibility and cloud performance have truly impressed our team.",
       rating: 5,
+      avatar: "https://i.ibb.co.com/Bg34vXn/AK.jpg",
     },
     {
       id: 5,
@@ -36,11 +40,12 @@ const Review = () => {
       title: "Software Engineer",
       text: "Amazing support, fast delivery, and brilliant design options. Highly recommended for professionals.",
       rating: 5,
+      avatar: "https://i.ibb.co.com/Bg34vXn/AK.jpg",
     },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleItems = 4; // Number of reviews visible at a time
+  const visibleItems = 2; // Show 3 reviews at a time
 
   const nextSlide = () => {
     setCurrentIndex(
@@ -58,7 +63,7 @@ const Review = () => {
 
   return (
     <div className="flex justify-center items-center bg-gray-100 py-12">
-      <div className="flex w-full  h-[500px]">
+      <div className="flex w-full h-[500px]">
         {/* Left Section */}
         <div className="w-1/2 bg-gray-900 text-white flex flex-col items-center justify-center h-full">
           <h2 className="text-3xl font-semibold mb-6 text-center">
@@ -102,16 +107,29 @@ const Review = () => {
           >
             &#8592;
           </button>
-          <div className="flex space-x-4 h-full items-center ml-20">
+          <div className="flex space-x-4 h-full items-center ml-7">
             {testimonials
               .slice(currentIndex, currentIndex + visibleItems)
               .map((testimonial) => (
                 <div
                   key={testimonial.id}
-                  className="bg-gray-100 rounded-lg p-6 shadow-md w-[250px] h-[350px] flex flex-col justify-between"
+                  className="bg-gray-100 rounded-lg p-6 shadow-md w-[450px] h-[290px] flex flex-col justify-between"
                 >
-                  <h3 className="font-semibold text-lg">{testimonial.name}</h3>
-                  <p className="text-sm text-gray-500">{testimonial.title}</p>
+                  <div className="flex items-center mb-4">
+                    <img
+                      src={testimonial.avatar}
+                      alt={`${testimonial.name}'s avatar`}
+                      className="w-12 h-12 rounded-full mr-4"
+                    />
+                    <div>
+                      <h3 className="font-semibold text-lg">
+                        {testimonial.name}
+                      </h3>
+                      <p className="text-sm text-gray-500">
+                        {testimonial.title}
+                      </p>
+                    </div>
+                  </div>
                   <p className="text-sm mb-4">{testimonial.text}</p>
                   <div className="flex">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
