@@ -89,7 +89,7 @@ const Navbar = () => {
 
         {/* Buttons */}
         <div className="flex space-x-4 mt-4 lg:mt-0">
-          <button className="px-4 py-2 text-gray-800 rounded-md border border-gray-300 hover:bg-gray-100">
+          <button className="px-4 py-2 text-gray-800 rounded-md  border-gray-300 ">
             Login / Signup
           </button>
           <a href="/rooms">

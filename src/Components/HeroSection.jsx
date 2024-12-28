@@ -2,21 +2,21 @@ import VideoPopup from "./VideoPopup";
 
 const HeroSection = () => {
   return (
-    <div className="container mx-auto flex flex-col-reverse md:flex-row items-center px-4 sm:px-6 md:px-8 py-10 relative">
-      {/* Top Middle Image */}
-      <img
-        src="https://i.ibb.co/H4YRj92/Vector-1.png"
-        alt="Top Decoration"
-        className="absolute top-0 left-1/2 transform -translate-x-1/2 w-8 sm:w-12 md:w-16 lg:w-20 xl:w-24 mt-24"
-      />
-
+    <div className="container mx-auto flex flex-col-reverse md:flex-row  px-4 sm:px-6 md:px-8 py-10 relative">
       {/* Left Section */}
       <div className="w-full md:w-3/5 space-y-6 relative z-10">
         <div>
           {/* Text Section */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-gray-800">
-            Find the top
-          </h1>
+          <div className="flex justify-between">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-gray-800">
+              Find the top
+            </h1>
+            <img
+              src="https://i.ibb.co/H4YRj92/Vector-1.png"
+              alt="Top Decoration"
+              className="   w-8 sm:w-12 md:w-16 lg:w-20 xl:w-24 "
+            />
+          </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl relative">
             <span className="text-gray-800">
               Hotels nearby<span style={{ color: "#CEAF83" }}>.</span>
@@ -24,7 +24,7 @@ const HeroSection = () => {
               <img
                 src="https://i.ibb.co/6vXZ3d8/Vector.png"
                 alt="Underline Decoration"
-                className="absolute -bottom-4 right-0 w-28 sm:w-36 md:w-40 lg:w-48 xl:w-56 transform translate-x-4 opacity-50"
+                className="absolute -bottom-4 right-52 w-28 sm:w-36 md:w-40 lg:w-48 xl:w-56 transform translate-x-4 opacity-50"
               />
             </span>
           </h1>
@@ -37,7 +37,7 @@ const HeroSection = () => {
           </p>
           <div
             style={{ color: "#4D4D4D" }}
-            className="flex flex-wrap justify-between mt-6 text-sm sm:text-base md:text-lg"
+            className="flex flex-wrap justify-between mt-12 text-sm sm:text-base md:text-lg"
           >
             <p>Vila</p>
             <p>Family House</p>
@@ -61,54 +61,28 @@ const HeroSection = () => {
           className="rounded-xl object-cover w-full h-full"
         />
       </div>
-      <div className="absolute bottom-10 w-full">
+      <div className="absolute bottom-28 w-full  hidden sm:block md:block lg:block xl:block ">
         <p className="text-sm sm:text-base md:text-lg">Check Availability</p>
-        <div className="flex  flex-wrap md:flex-nowrap  bg-white shadow-2xl rounded-full p-4 md:p-6 w-full max-w-5xl  mt-5">
+        <div className="flex  flex-wrap md:flex-nowrap  bg-white shadow-2xl rounded-full p-4 md:p-6 w-3/4 ">
           {/* Input Fields */}
           <div className="flex w-full justify-between items-center flex-wrap md:flex-nowrap">
-            {/* Check In */}
-            <div className="text-center px-2 sm:px-4 ">
-              <p className="font-medium text-gray-700 text-sm sm:text-base">
-                Check In
-              </p>
-              <p className="text-gray-400 text-xs sm:text-sm">Add dates</p>
-            </div>
-            <div className="hidden md:block border-r border-gray-300 h-10"></div>
-
-            {/* Check Out */}
-            <div className="text-center px-2 sm:px-4">
-              <p className="font-medium text-gray-700 text-sm sm:text-base">
-                Check Out
-              </p>
-              <p className="text-gray-400 text-xs sm:text-sm">Add dates</p>
-            </div>
-            <div className="hidden md:block border-r border-gray-300 h-10"></div>
-
-            {/* Adults */}
-            <div className="text-center px-2 sm:px-4">
-              <p className="font-medium text-gray-700 text-sm sm:text-base">
-                Adults
-              </p>
-              <p className="text-gray-400 text-xs sm:text-sm">Add Adults</p>
-            </div>
-            <div className="hidden md:block border-r border-gray-300 h-10"></div>
-
-            {/* Children */}
-            <div className="text-center px-2 sm:px-4">
-              <p className="font-medium text-gray-700 text-sm sm:text-base">
-                Children
-              </p>
-              <p className="text-gray-400 text-xs sm:text-sm">Add Children</p>
-            </div>
-            <div className="hidden md:block border-r border-gray-300 h-10"></div>
-
-            {/* Rooms */}
-            <div className="text-center px-2 sm:px-4">
-              <p className="font-medium text-gray-700 text-sm sm:text-base">
-                Room's
-              </p>
-              <p className="text-gray-400 text-xs sm:text-sm">Add Room's</p>
-            </div>
+            {[
+              { title: "Check in", text: "Add Dates" },
+              { title: "check Out", text: "Add Dates" },
+              { title: "Aduls", text: "Add Dates" },
+              { title: "Children", text: "Add Dates" },
+              { title: "Rooms", text: "Add Dates" },
+            ].map((sin) => (
+              <>
+                <div className="text-center px-20 sm:px-4" key={sin.title}>
+                  <p className="font-medium text-gray-700 text-sm sm:text-base">
+                    {sin.title}
+                  </p>
+                  <p className="text-gray-400 text-xs sm:text-sm">{sin.text}</p>
+                </div>
+                <div className="hidden md:block border-r border-gray-300 h-10"></div>
+              </>
+            ))}
           </div>
 
           {/* Search Button */}
