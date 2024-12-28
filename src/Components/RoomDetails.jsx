@@ -53,7 +53,7 @@ const RoomDetails = () => {
         {/* Left Section */}
         <div className="md:w-1/2">
           <h1 className="text-2xl md:text-4xl font-bold text-gray-900">
-            Discover Homeya's Finest Properties For Your Dream Home
+            {`Discover Homeya's Finest Properties For Your Dream Home`}
           </h1>
         </div>
 

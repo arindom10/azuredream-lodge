@@ -14,7 +14,7 @@ const HeroSection = () => {
             <img
               src="https://i.ibb.co/H4YRj92/Vector-1.png"
               alt="Top Decoration"
-              className="   w-8 sm:w-12 md:w-16 lg:w-20 xl:w-24 "
+              className="   w-12 h-12 "
             />
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl relative">
@@ -37,7 +37,7 @@ const HeroSection = () => {
           </p>
           <div
             style={{ color: "#4D4D4D" }}
-            className="flex flex-wrap justify-between mt-12 text-sm sm:text-base md:text-lg"
+            className="flex flex-wrap justify-between mt-12 text-sm sm:text-base md:text-lg "
           >
             <p>Vila</p>
             <p>Family House</p>

@@ -57,7 +57,7 @@ const Footer = () => {
             </li>
             <li>
               <a href="Twitter" className="hover:underline">
-                Our Blog's
+                {`Our Blog's`}
               </a>
             </li>
             <li>
@@ -99,7 +99,7 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-bold text-gray-800 mb-4">Contact Info</h3>
           <p className="mb-2">
-            <span className="font-bold">Email: </span>
+            <span className="font-bold">Email:&nbsp;</span>
             hunkyAgencyUI@gmail.com
           </p>
           <p>
