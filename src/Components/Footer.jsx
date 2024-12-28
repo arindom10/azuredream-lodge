@@ -99,12 +99,14 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-bold text-gray-800 mb-4">Contact Info</h3>
           <p className="mb-2">
-            <span className="font-bold">Email:&nbsp;</span>
-            hunkyAgencyUI@gmail.com
+            <span className="font-bold">Email: hunkyAgencyUI@gmail.com</span>
           </p>
           <p>
-            <span className="font-bold">Location: </span>
-            302/1, Hazi Tower, Gandaria New Rd, Dhaka 1204
+            <span className="font-bold">
+              {" "}
+              Location:{" "}
+              <span>302/1, Hazi Tower, Gandaria New Rd, Dhaka 1204</span>
+            </span>
           </p>
         </div>
       </div>
