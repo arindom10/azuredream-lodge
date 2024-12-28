@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Review = () => {
   const testimonials = [
@@ -6,7 +6,7 @@ const Review = () => {
       id: 1,
       name: "Arman",
       title: "Webflow Developer",
-      text: "Amazing design, easy to customize and a design quality superlative account on its cloud platform for the optimized performance. And we didn’t on our original designs.",
+      text: "Amazing design, easy to customize and a design quality superlative  on its cloud platform for the optimized performance.",
       rating: 5,
       avatar: "https://i.ibb.co.com/Bg34vXn/AK.jpg",
     },
@@ -38,14 +38,29 @@ const Review = () => {
       id: 5,
       name: "Liam",
       title: "Software Engineer",
-      text: "Amazing support, fast delivery, and brilliant design options. Highly recommended for professionals.",
+      text: "Amazing support, fast delivery, and brilliant design options. Highly recommended for professionals.Have truly impressed our team.",
       rating: 5,
       avatar: "https://i.ibb.co.com/Bg34vXn/AK.jpg",
     },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleItems = 2; // Show 3 reviews at a time
+  const [visibleItems, setVisibleItems] = useState(2);
+
+  useEffect(() => {
+    // Set visible items based on screen size
+    const updateVisibleItems = () => {
+      if (window.innerWidth < 768) {
+        setVisibleItems(1); // For small screens, show 1 testimonial at a time
+      } else {
+        setVisibleItems(2); // Default for larger screens
+      }
+    };
+
+    updateVisibleItems();
+    window.addEventListener("resize", updateVisibleItems);
+    return () => window.removeEventListener("resize", updateVisibleItems);
+  }, []);
 
   const nextSlide = () => {
     setCurrentIndex(
@@ -62,11 +77,11 @@ const Review = () => {
   };
 
   return (
-    <div className="flex justify-center items-center bg-gray-100 py-12">
-      <div className="flex w-full h-[500px]">
+    <div className="flex justify-center items-center ">
+      <div className="flex flex-col lg:flex-row w-full lg:h-[500px]">
         {/* Left Section */}
-        <div className="w-1/2 bg-gray-900 text-white flex flex-col items-center justify-center h-full">
-          <h2 className="text-3xl font-semibold mb-6 text-center">
+        <div className="w-full lg:w-1/2 bg-gray-900 text-white flex flex-col items-center justify-center py-8 px-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-center">
             Rave Reviews from Our Satisfied Guests
           </h2>
           <div className="flex items-center space-x-4">
@@ -100,20 +115,14 @@ const Review = () => {
         </div>
 
         {/* Right Section */}
-        <div className="w-1/2 bg-white text-gray-900 relative h-full overflow-hidden">
-          <button
-            onClick={prevSlide}
-            className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 absolute left-2 top-1/2 transform -translate-y-1/2 z-10"
-          >
-            &#8592;
-          </button>
-          <div className="flex space-x-4 h-full items-center ml-7">
+        <div className="w-full lg:w-1/2 bg-white text-gray-900 relative overflow-hidden py-8 px-4">
+          <div className="flex overflow-hidden h-full items-center space-x-4 lg:space-x-6">
             {testimonials
               .slice(currentIndex, currentIndex + visibleItems)
               .map((testimonial) => (
                 <div
                   key={testimonial.id}
-                  className="bg-gray-100 rounded-lg p-6 shadow-md w-[450px] h-[290px] flex flex-col justify-between"
+                  className="bg-gray-100 rounded-lg p-4 sm:p-6 shadow-md w-full lg:w-[450px] flex flex-col justify-between"
                 >
                   <div className="flex items-center mb-4">
                     <img
@@ -122,15 +131,15 @@ const Review = () => {
                       className="w-12 h-12 rounded-full mr-4"
                     />
                     <div>
-                      <h3 className="font-semibold text-lg">
+                      <h3 className="font-semibold text-base sm:text-lg">
                         {testimonial.name}
                       </h3>
-                      <p className="text-sm text-gray-500">
+                      <p className="text-xs sm:text-sm text-gray-500">
                         {testimonial.title}
                       </p>
                     </div>
                   </div>
-                  <p className="text-sm mb-4">{testimonial.text}</p>
+                  <p className="text-xs sm:text-sm mb-4">{testimonial.text}</p>
                   <div className="flex">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
                       <span key={i} className="text-yellow-500">
@@ -141,6 +150,12 @@ const Review = () => {
                 </div>
               ))}
           </div>
+          <button
+            onClick={prevSlide}
+            className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 absolute left-2 top-1/2 transform -translate-y-1/2 z-10"
+          >
+            &#8592;
+          </button>
           <button
             onClick={nextSlide}
             className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 absolute right-2 top-1/2 transform -translate-y-1/2 z-10"

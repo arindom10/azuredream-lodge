@@ -1,11 +1,9 @@
-import React from "react";
-
 const RoomDetails = () => {
   const rooms = [
     {
       id: 1,
       name: "Deluxe Double Room",
-      image: "https://i.ibb.co.com/jy48BZC/01.png", // Replace with actual image URL
+      image: "https://i.ibb.co.com/jy48BZC/01.png",
       price: "$62.00/Day",
       size: "500 Sqft",
       guests: "1-4 guests",
@@ -14,7 +12,7 @@ const RoomDetails = () => {
     {
       id: 2,
       name: "Deluxe Double Room",
-      image: "https://i.ibb.co.com/sbgNS7K/Rectangle-4780-1.png", // Replace with actual image URL
+      image: "https://i.ibb.co.com/sbgNS7K/Rectangle-4780-1.png",
       price: "$62.00/Day",
       size: "500 Sqft",
       guests: "1-4 guests",
@@ -23,7 +21,7 @@ const RoomDetails = () => {
     {
       id: 3,
       name: "Hill View Suite",
-      image: "https://i.ibb.co.com/PMhvZjj/03-1.png", // Replace with actual image URL
+      image: "https://i.ibb.co.com/PMhvZjj/03-1.png",
       price: "$62.00/Day",
       size: "500 Sqft",
       guests: "1-4 guests",
@@ -32,7 +30,7 @@ const RoomDetails = () => {
     {
       id: 4,
       name: "Hill View Suite",
-      image: "https://i.ibb.co.com/F71SdcX/04-1.png", // Replace with actual image URL
+      image: "https://i.ibb.co.com/F71SdcX/04-1.png",
       price: "$62.00/Day",
       size: "500 Sqft",
       guests: "1-4 guests",
@@ -41,7 +39,7 @@ const RoomDetails = () => {
     {
       id: 5,
       name: "Hill View Suite",
-      image: "https://i.ibb.co.com/ctWDcFM/Rectangle-4784.png", // Replace with actual image URL
+      image: "https://i.ibb.co.com/ctWDcFM/Rectangle-4784.png",
       price: "$62.00/Day",
       size: "500 Sqft",
       guests: "1-4 guests",
