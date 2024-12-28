@@ -30,10 +30,10 @@ const HeroSection = () => {
           </h1>
 
           <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-gray-600">
-            Looking for a comfortable and convenient home? Our house rental
+            {` Looking for a comfortable and convenient home? Our house rental
             offers spacious living areas, modern amenities, and a prime
             location. Featuring multiple bedrooms, updated kitchens, and cozy
-            living spaces, it’s perfect for families or professionals.
+            living spaces, its perfect for families or professionals.`}
           </p>
           <div
             style={{ color: "#4D4D4D" }}
@@ -52,70 +52,7 @@ const HeroSection = () => {
         </div>
 
         {/* Bottom Form Section */}
-        <div className="mt-10">
-          <p className="text-sm sm:text-base md:text-lg">Check Availability</p>
-          <div className="flex flex-wrap md:flex-nowrap justify-between items-center bg-white shadow-2xl rounded-full p-4 md:p-6 w-full max-w-5xl mx-auto mt-5">
-            {/* Input Fields */}
-            <div className="flex w-full justify-between items-center flex-wrap md:flex-nowrap">
-              {/* Check In */}
-              <div className="text-center px-2 sm:px-4">
-                <p className="font-medium text-gray-700 text-sm sm:text-base">
-                  Check In
-                </p>
-                <p className="text-gray-400 text-xs sm:text-sm">Add dates</p>
-              </div>
-              <div className="hidden md:block border-r border-gray-300 h-10"></div>
-
-              {/* Check Out */}
-              <div className="text-center px-2 sm:px-4">
-                <p className="font-medium text-gray-700 text-sm sm:text-base">
-                  Check Out
-                </p>
-                <p className="text-gray-400 text-xs sm:text-sm">Add dates</p>
-              </div>
-              <div className="hidden md:block border-r border-gray-300 h-10"></div>
-
-              {/* Adults */}
-              <div className="text-center px-2 sm:px-4">
-                <p className="font-medium text-gray-700 text-sm sm:text-base">
-                  Adults
-                </p>
-                <p className="text-gray-400 text-xs sm:text-sm">Add Adults</p>
-              </div>
-              <div className="hidden md:block border-r border-gray-300 h-10"></div>
-
-              {/* Children */}
-              <div className="text-center px-2 sm:px-4">
-                <p className="font-medium text-gray-700 text-sm sm:text-base">
-                  Children
-                </p>
-                <p className="text-gray-400 text-xs sm:text-sm">Add Children</p>
-              </div>
-              <div className="hidden md:block border-r border-gray-300 h-10"></div>
-
-              {/* Rooms */}
-              <div className="text-center px-2 sm:px-4">
-                <p className="font-medium text-gray-700 text-sm sm:text-base">
-                  Room's
-                </p>
-                <p className="text-gray-400 text-xs sm:text-sm">Add Room's</p>
-              </div>
-            </div>
-
-            {/* Search Button */}
-            <button
-              style={{ backgroundColor: "#CEAF83" }}
-              className="text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg ml-4 mt-4 md:mt-0"
-            >
-              <img
-                src="https://i.ibb.co.com/xY3Cpjy/Vector-2.png"
-                alt="Search"
-              />
-            </button>
-          </div>
-        </div>
       </div>
-
       {/* Right Image Section */}
       <div className="w-full md:w-2/5">
         <img
@@ -123,6 +60,65 @@ const HeroSection = () => {
           alt="Hotel"
           className="rounded-xl object-cover w-full h-full"
         />
+      </div>
+      <div className="absolute bottom-10 w-full">
+        <p className="text-sm sm:text-base md:text-lg">Check Availability</p>
+        <div className="flex  flex-wrap md:flex-nowrap  bg-white shadow-2xl rounded-full p-4 md:p-6 w-full max-w-5xl  mt-5">
+          {/* Input Fields */}
+          <div className="flex w-full justify-between items-center flex-wrap md:flex-nowrap">
+            {/* Check In */}
+            <div className="text-center px-2 sm:px-4 ">
+              <p className="font-medium text-gray-700 text-sm sm:text-base">
+                Check In
+              </p>
+              <p className="text-gray-400 text-xs sm:text-sm">Add dates</p>
+            </div>
+            <div className="hidden md:block border-r border-gray-300 h-10"></div>
+
+            {/* Check Out */}
+            <div className="text-center px-2 sm:px-4">
+              <p className="font-medium text-gray-700 text-sm sm:text-base">
+                Check Out
+              </p>
+              <p className="text-gray-400 text-xs sm:text-sm">Add dates</p>
+            </div>
+            <div className="hidden md:block border-r border-gray-300 h-10"></div>
+
+            {/* Adults */}
+            <div className="text-center px-2 sm:px-4">
+              <p className="font-medium text-gray-700 text-sm sm:text-base">
+                Adults
+              </p>
+              <p className="text-gray-400 text-xs sm:text-sm">Add Adults</p>
+            </div>
+            <div className="hidden md:block border-r border-gray-300 h-10"></div>
+
+            {/* Children */}
+            <div className="text-center px-2 sm:px-4">
+              <p className="font-medium text-gray-700 text-sm sm:text-base">
+                Children
+              </p>
+              <p className="text-gray-400 text-xs sm:text-sm">Add Children</p>
+            </div>
+            <div className="hidden md:block border-r border-gray-300 h-10"></div>
+
+            {/* Rooms */}
+            <div className="text-center px-2 sm:px-4">
+              <p className="font-medium text-gray-700 text-sm sm:text-base">
+                Room's
+              </p>
+              <p className="text-gray-400 text-xs sm:text-sm">Add Room's</p>
+            </div>
+          </div>
+
+          {/* Search Button */}
+          <button
+            style={{ backgroundColor: "#CEAF83" }}
+            className="text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg ml-4 mt-4 md:mt-0"
+          >
+            <img src="https://i.ibb.co.com/xY3Cpjy/Vector-2.png" alt="Search" />
+          </button>
+        </div>
       </div>
     </div>
   );
