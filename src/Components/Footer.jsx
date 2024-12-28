@@ -18,25 +18,34 @@ const Footer = () => {
           <p className="mb-4">Follow us on social media</p>
           <div className="flex space-x-4">
             <a
-              href="facebook"
+              href="https://facebook.com"
               className="text-gray-600 hover:text-gray-800"
               aria-label="Facebook"
             >
-              <i className="fab fa-facebook fa-lg"></i>
+              <i
+                style={{ backgroundColor: "#CEAF83" }}
+                className="fab fa-facebook-f fa-lg p-3 rounded-full"
+              ></i>
             </a>
             <a
-              href="LinkedIn"
+              href="https://linkedin.com"
               className="text-gray-600 hover:text-gray-800"
               aria-label="LinkedIn"
             >
-              <i className="fab fa-linkedin fa-lg"></i>
+              <i
+                style={{ backgroundColor: "#CEAF83" }}
+                className="fab fa-linkedin-in fa-lg p-3 rounded-full"
+              ></i>
             </a>
             <a
-              href="Twitter"
+              href="https://twitter.com"
               className="text-gray-600 hover:text-gray-800"
               aria-label="Twitter"
             >
-              <i className="fab fa-twitter fa-lg"></i>
+              <i
+                style={{ backgroundColor: "#CEAF83" }}
+                className="fab fa-twitter fa-lg p-3 rounded-full"
+              ></i>
             </a>
           </div>
         </div>
@@ -46,22 +55,22 @@ const Footer = () => {
           <h3 className="text-lg font-bold text-gray-800 mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <a href="Twitter" className="hover:underline">
+              <a href="About us" className="hover:underline">
                 About us
               </a>
             </li>
             <li>
-              <a href="Twitter" className="hover:underline">
+              <a href="Our Service" className="hover:underline">
                 Our Service
               </a>
             </li>
             <li>
-              <a href="Twitter" className="hover:underline">
+              <a href="Our Blog's" className="hover:underline">
                 {`Our Blog's`}
               </a>
             </li>
             <li>
-              <a href="Twitter" className="hover:underline">
+              <a href="Contact" className="hover:underline">
                 Contact
               </a>
             </li>
@@ -73,22 +82,22 @@ const Footer = () => {
           <h3 className="text-lg font-bold text-gray-800 mb-4">Appointment</h3>
           <ul className="space-y-2">
             <li>
-              <a href="Twitter" className="hover:underline">
+              <a href="Web Design and development" className="hover:underline">
                 Web Design and development
               </a>
             </li>
             <li>
-              <a href="Twitter" className="hover:underline">
+              <a href="UI UX Service" className="hover:underline">
                 UI UX Service
               </a>
             </li>
             <li>
-              <a href="Twitter" className="hover:underline">
+              <a href="Digital marketing" className="hover:underline">
                 Digital marketing
               </a>
             </li>
             <li>
-              <a href="Twitter" className="hover:underline">
+              <a href="Custom Web Design" className="hover:underline">
                 Custom Web Design
               </a>
             </li>
@@ -99,14 +108,12 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-bold text-gray-800 mb-4">Contact Info</h3>
           <p className="mb-2">
-            <span className="font-bold">Email: hunkyAgencyUI@gmail.com</span>
+            <span className="font-bold">Email: </span>
+            <span>hunkyAgencyUI@gmail.com</span>
           </p>
           <p>
-            <span className="font-bold">
-              {" "}
-              Location:{" "}
-              <span>302/1, Hazi Tower, Gandaria New Rd, Dhaka 1204</span>
-            </span>
+            <span className="font-bold"> Location: </span>
+            <span>302/1, Hazi Tower, Gandaria New Rd, Dhaka 1204</span>
           </p>
         </div>
       </div>
